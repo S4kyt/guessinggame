@@ -1,3 +1,5 @@
+// Copyright (c) Slapjacky 2020
+
 #include <iostream>
 
 #include "random.h"
@@ -14,23 +16,21 @@
 int main()
 {
     int numberInput;
-    bool gameIsRunning = true;
 
-    int winningNumber = generateAnswer(); // generate winning condition before anything else
+    int winningNumber = 1; // generate winning condition before anything else
 
     do
     {
         if (numberInput >= 0 && numberInput <= 100 ) //i know i made a mistake here, i also know you explained why its bad, but i forgot since then
         {
-            std::cout << "The winner number is: " + winningNumber << std::endl;
+            std::cout << "The winner number is:" + winningNumber << std::endl;
             std::cout << "Please pick a number between 0-100:" << std::endl;
             std::cin >> numberInput;
-            std::cout << "Your answer was: " + numberInput << std::endl;
+            std::cout << "Your answer was:" + numberInput << std::endl;
 
             if (numberInput == winningNumber)
             {
                 std::cout << "Congratulations! You won! The correct answer was:" + winningNumber << std::endl;
-                gameIsRunning = false;
             }
 
             else if (numberInput < winningNumber)
@@ -54,7 +54,7 @@ int main()
             std::cout << "Your entered answer isn't between 0-100 or you've entered something else other than a number. Please try again." <<std::endl;
         }
 
-    } while (gameIsRunning == true);
+    } while (numberInput != winningNumber);
 
 
     return 0;
