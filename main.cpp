@@ -5,7 +5,7 @@
 #include "random.h"
 
 //you pick random number between 0-100. asks user is the number smaller or bigger than given answer. loop until found
-
+//
 //user is asked for input
 //user enters input
 //check to see if input is correct - if not restart the cycle
